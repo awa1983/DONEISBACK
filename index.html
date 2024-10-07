@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nama Berjalan</title>
+    <style>
+      /* Container untuk membatasi area teks berjalan */
+      .nama-berjalan-container {
+        width: 100%;
+        height: 650px;
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      /* Teks yang akan berjalan */
+      .nama-berjalan {
+        text-align: center;
+        display: inline-block;
+        font-size: 500px;
+        padding-left: 100%; /* Mulai di luar container */
+        animation: scroll 17s linear infinite;
+      }
+
+      /* Keyframes untuk animasi berjalan */
+      @keyframes scroll {
+        0% {
+          transform: translateX(100%); /* Mulai dari luar */
+        }
+        100% {
+          transform: translateX(-100%); /* Bergerak sampai hilang ke kiri */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nama-berjalan-container">
+      <span class="nama-berjalan">DONIE DEWANTORO</span>
+    </div>
+  </body>
+</html>
